@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>MultiTabOpen</title>
+    <script type="text/javascript">
+        function open_tabs() {
+            var urlsTB = document.getElementById('urls');
+            var text = urlsTB.value;
+            var addresses = text.split('\n');
+            for (i = 0; i < addresses.length; i++) {
+                if (addresses[i].length !== 0
+                        && addresses[i].match('((https?|ftp|gopher|telnet|file|notes|ms-help):((//)|(\\\\))+[\w\d:#@%/;$()~_?\+-=\\\.&]*)')) {
+                    chrome.tabs.create({"url": addresses[i]});
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="">
+    <label for="urls">URLs:</label>
+    <textarea id="urls" cols="40" rows="10">Paste URLs to open...</textarea>
+    <input type="submit" value="Open" onclick="open_tabs()"/>
+</form>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "name": "MultiTabOpen",
+    "version": "0.1",
+    "description": "This plugin opens multiple tabs based on the given input string. Every line in the displayed textbox should be a valid url, invalid urls will not be opend.",
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png" },
+    "browser_action": {
+        "default_icon": "icon48.png",
+        "default_title": "MultiTabOpen",
+        "popup": "popup.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
