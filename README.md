@@ -8,6 +8,6 @@ Installation
 -----------------------
 Open the "src" folder in the Chrome Plugin Manager.
 
- How to use
- ---------------------
- Just paste a bunch of links into the provided textbox and submit the form.
+How to use
+---------------------
+Just paste a bunch of links into the provided textbox and submit the form.
